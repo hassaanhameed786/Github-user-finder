@@ -267,6 +267,7 @@ img {
 .alert-dark {
   background: var(--dark-color);
   color: #fff;
+  border-radius: 20px;
 }
 
 .btn-danger,

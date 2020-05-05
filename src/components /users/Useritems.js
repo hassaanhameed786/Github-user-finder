@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types' 
 
-export class Useritems extends Component { 
-
-    render() {
-
-        const{login,avatar_url,html_url}=this.props.user 
+const Useritems = ({user:{login,avatar_url,html_url}}) =>{ 
+        
         return (
             <div className="card text-center">
             
@@ -20,7 +18,11 @@ export class Useritems extends Component {
             </div>
             </div>
         );
-    }
+    
 }
+Useritems.prototype ={
+    user:PropTypes.object.isRequired,   // ptor <== Hotkey 
+
+};
 
 export default Useritems
